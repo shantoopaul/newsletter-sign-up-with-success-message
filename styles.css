@@ -15,7 +15,29 @@
 	src: url('./assets/fonts/roboto-v48-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* variables */
+:root {
+	--red: hsl(4, 100%, 67%);
+	--blue-800: hsl(234, 29%, 20%);
+	--blue-700: hsl(235, 18%, 26%);
+	--grey: hsl(0, 0%, 58%);
+	--white: hsl(0, 0%, 100%);
+
+	--text-16: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }

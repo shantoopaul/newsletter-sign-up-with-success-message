@@ -49,6 +49,54 @@
 	<body>
 		<main>
 			<h1>Newsletter sign up with success message</h1>
+			<!-- Sign-up form start -->
+			<article>
+				<picture>
+					<source
+						media="(max-width: 425px)"
+						srcset="./assets/images/illustration-sign-up-mobile.svg" />
+					<source
+						media="(min-width: 426px) and (max-width: 768px)"
+						srcset="./assets/images/illustration-sign-up-tablet.svg"
+						decoding="async" />
+					<source
+						media="(min-width: 769px)"
+						srcset="./assets/images/illustration-sign-up-desktop.svg"
+						decoding="async" />
+					<img
+						src="./assets/images/illustration-sign-up-mobile.svg"
+						alt="Illustration"
+						decoding="async" />
+				</picture>
+				<div>
+					<h2>Stay updated!</h2>
+					<p>Join 60,000+ product managers receiving monthly updates on:</p>
+					<ul>
+						<li>Product discovery and building what matters</li>
+						<li>Measuring to ensure updates are a success</li>
+						<li>And much more!</li>
+					</ul>
+					<label for="email">Email address</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="email@company.com"
+						required />
+					<button type="submit">Subscribe to monthly newsletter</button>
+				</div>
+			</article>
+			<!-- Sign-up form end -->
+
+			<!-- Success message start -->
+			<article>
+				<img src="./assets/icons/icon-success.svg" alt="Success icon" loading="lazy" />
+				<p>Thanks for subscribing!</p>
+				<p>A confirmation email has been sent to ash@loremcompany.com.</p>
+				<p>Please open it and click the button inside to confirm your subscription.</p>
+				<button type="button">Dismiss message</button>
+			</article>
+			<!-- Success message end -->
 		</main>
 		<!-- Script -->
 		<script defer src="scripts.js"></script>
