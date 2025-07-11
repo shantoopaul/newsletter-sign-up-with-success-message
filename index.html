@@ -34,12 +34,12 @@
 			rel="preload"
 			as="image"
 			href="./assets/images/illustration-sign-up-tablet.svg"
-			media="(min-width: 376px) and (max-width: 768px)" />
+			media="(min-width: 376px) and (max-width: 888px)" />
 		<link
 			rel="preload"
 			as="image"
 			href="./assets/images/illustration-sign-up-desktop.svg"
-			media="(min-width: 769px)" />
+			media="(min-width: 889px)" />
 		<link rel="preload" as="image" href="./assets/icons/icon-list.svg" />
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="styles.css" />
@@ -49,60 +49,70 @@
 	<body>
 		<main>
 			<h1 class="visually-hidden">Newsletter sign up with success message</h1>
-			<!-- Sign-up form start -->
-			<article class="newsletter-container hidden">
-				<picture class="newsletter-image">
-					<source
-						media="(max-width: 375px)"
-						srcset="./assets/images/illustration-sign-up-mobile.svg" />
-					<source
-						media="(min-width: 376px) and (max-width: 768px)"
-						srcset="./assets/images/illustration-sign-up-tablet.svg"
-						decoding="async" />
-					<source
-						media="(min-width: 769px)"
-						srcset="./assets/images/illustration-sign-up-desktop.svg"
-						decoding="async" />
-					<img
-						src="./assets/images/illustration-sign-up-mobile.svg"
-						alt="Illustration"
-						decoding="async" />
-				</picture>
-				<div class="newsletter-content">
-					<h2>Stay updated!</h2>
-					<p>Join 60,000+ product managers receiving monthly updates on:</p>
-					<ul class="newsletter-benefits">
-						<li>Product discovery and building what matters</li>
-						<li>Measuring to ensure updates are a success</li>
-						<li>And much more!</li>
-					</ul>
-					<form class="newsletter-form">
-						<label for="email">Email address</label>
-						<input
-							type="email"
-							id="email"
-							name="email"
-							placeholder="email@company.com"
-							required />
-						<button class="btn" type="submit">Subscribe to monthly newsletter</button>
-					</form>
+
+			<!-- Newsletter Form -->
+			<article class="newsletter-container">
+				<div class="newsletter-image-wrapper">
+					<picture>
+						<source
+							media="(max-width: 375px)"
+							srcset="./assets/images/illustration-sign-up-mobile.svg" />
+						<source
+							media="(min-width: 376px) and (max-width: 888px)"
+							srcset="./assets/images/illustration-sign-up-tablet.svg"
+							decoding="async" />
+						<source
+							media="(min-width: 889px)"
+							srcset="./assets/images/illustration-sign-up-desktop.svg"
+							decoding="async" />
+						<img
+							src="./assets/images/illustration-sign-up-mobile.svg"
+							alt="Newsletter signup illustration"
+							decoding="async" />
+					</picture>
+				</div>
+
+				<div class="newsletter-content-wrapper">
+					<section class="newsletter-content">
+						<h2>Stay updated!</h2>
+						<p>Join 60,000+ product managers receiving monthly updates on:</p>
+						<ul class="newsletter-benefits">
+							<li>Product discovery and building what matters</li>
+							<li>Measuring to ensure updates are a success</li>
+							<li>And much more!</li>
+						</ul>
+						<form class="newsletter-form" novalidate>
+							<label for="email">Email address</label>
+							<span
+								id="email-error"
+								class="email-error hidden"
+								aria-live="polite"></span>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="email@company.com"
+								required />
+							<button class="btn" type="submit">
+								Subscribe to monthly newsletter
+							</button>
+						</form>
+					</section>
 				</div>
 			</article>
-			<!-- Sign-up form end -->
 
-			<!-- Success message start -->
-			<article class="success-message-container">
+			<!-- Success Message -->
+			<article class="success-message-container hidden" aria-live="polite">
 				<div class="success-message">
 					<img src="./assets/icons/icon-success.svg" alt="Success icon" loading="lazy" />
 					<p>Thanks for subscribing!</p>
 					<p>
-						A confirmation email has been sent to ash@loremcompany.com. Please open it
-						and click the button inside to confirm your subscription.
+						A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+						Please open it and click the button inside to confirm your subscription.
 					</p>
 				</div>
 				<button class="btn" type="button">Dismiss message</button>
 			</article>
-			<!-- Success message end -->
 		</main>
 		<!-- Script -->
 		<script defer src="scripts.js"></script>
