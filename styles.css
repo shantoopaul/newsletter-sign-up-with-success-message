@@ -55,7 +55,7 @@
 	--space-40: 2.5rem;
 	--space-48: 3rem;
 	--space-64: 4rem;
-	--space-100: 6.25rem;
+	--space-88: 5.5rem;
 	--space-136: 8.5rem;
 	--space-fluid: clamp(1.5rem, -24.046rem + 45.977vw, 4rem);
 
@@ -211,7 +211,7 @@ input {
 	}
 
 	.newsletter-content {
-		padding: var(--space-100) var(--space-fluid);
+		padding: var(--space-88) var(--space-fluid);
 	}
 
 	.newsletter-content .btn {
