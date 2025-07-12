@@ -83,17 +83,22 @@
 						</ul>
 						<form class="newsletter-form" novalidate>
 							<label for="email">Email address</label>
-							<span
-								id="email-error"
-								class="email-error hidden"
-								aria-live="polite"></span>
 							<input
 								type="email"
 								id="email"
 								name="email"
 								placeholder="email@company.com"
+								aria-required="true"
+								autocomplete="off"
 								required />
-							<button class="btn" type="submit">
+							<span
+								id="email-error"
+								class="email-error hidden"
+								aria-live="polite"></span>
+							<button
+								class="btn"
+								type="submit"
+								aria-label="Subscribe to monthly newsletter">
 								Subscribe to monthly newsletter
 							</button>
 						</form>
@@ -102,13 +107,18 @@
 			</article>
 
 			<!-- Success Message -->
-			<article class="success-message-container hidden" aria-live="polite">
+			<article class="success-message-container hidden" aria-live="polite" role="alert">
 				<div class="success-message">
-					<img src="./assets/icons/icon-success.svg" alt="Success icon" loading="lazy" />
+					<img
+						src="./assets/icons/icon-success.svg"
+						alt=""
+						aria-hidden="true"
+						loading="lazy" />
 					<p>Thanks for subscribing!</p>
 					<p>
-						A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
-						Please open it and click the button inside to confirm your subscription.
+						A confirmation email has been sent to
+						<strong class="success-email">ash@loremcompany.com</strong>. Please open it
+						and click the button inside to confirm your subscription.
 					</p>
 				</div>
 				<button class="btn" type="button">Dismiss message</button>
