@@ -55,6 +55,7 @@
 	--space-40: 2.5rem;
 	--space-48: 3rem;
 	--space-64: 4rem;
+	--space-100: 6.25rem;
 	--space-136: 8.5rem;
 	--space-fluid: clamp(1.5rem, -24.046rem + 45.977vw, 4rem);
 
@@ -151,7 +152,6 @@ input {
 .newsletter-container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	background-color: var(--white);
 }
 
@@ -166,6 +166,7 @@ input {
 @media screen and (min-width: 889px) {
 	.newsletter-container {
 		flex-direction: row-reverse;
+		align-items: center;
 		max-width: var(--newsletter-mw);
 		width: 100%;
 		border-radius: var(--radius-38);
@@ -210,7 +211,7 @@ input {
 	}
 
 	.newsletter-content {
-		padding: 0 var(--space-fluid);
+		padding: var(--space-100) var(--space-fluid);
 	}
 
 	.newsletter-content .btn {
